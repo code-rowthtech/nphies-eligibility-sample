@@ -1,0 +1,20 @@
+{
+  "name": "nphies-eligibility-sample",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Offline NPHIES-oriented eligibility message construction and subset validation",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22.18.0"
+  },
+  "scripts": {
+    "start": "node src/cli.ts",
+    "test": "node --test tests/*.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^22.19.0",
+    "typescript": "~5.9.3"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "nphies-eligibility-sample",
+  "description": "Build an offline FHIR eligibility message with an NPHIES event and local subset validation.",
+  "topics": [
+    "healthcare",
+    "fhir",
+    "nphies",
+    "interoperability",
+    "typescript"
+  ],
+  "priority": "P0",
+  "market": "GCC",
+  "sampleStatus": "ready-for-documented-offline-demo",
+  "productionReady": false,
+  "validationScope": "Local synthetic fixtures, documented sample rules, automated tests and type checks where applicable"
+}

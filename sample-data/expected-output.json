@@ -1,0 +1,185 @@
+{
+  "resourceType": "Bundle",
+  "id": "0571e3e2-01c3-42fb-935b-f09fd3c8a16e",
+  "type": "message",
+  "timestamp": "2026-01-01T12:00:00Z",
+  "meta": {
+    "tag": [
+      {
+        "system": "https://example.invalid/sample-status",
+        "code": "synthetic-not-exchange-validated"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:aa3263c2-14c6-4d5f-8924-43e7170bc8e2",
+      "resource": {
+        "resourceType": "MessageHeader",
+        "id": "aa3263c2-14c6-4d5f-8924-43e7170bc8e2",
+        "eventCoding": {
+          "system": "http://nphies.sa/terminology/CodeSystem/ksa-message-events",
+          "code": "eligibility-request"
+        },
+        "source": {
+          "endpoint": "https://example.invalid/synthetic-provider"
+        },
+        "sender": {
+          "type": "Organization",
+          "identifier": {
+            "system": "http://nphies.sa/license/provider-license",
+            "value": "SYNTHETIC-PROVIDER"
+          }
+        },
+        "destination": [
+          {
+            "endpoint": "http://nphies.sa/license/payer-license/SYNTHETIC-PAYER",
+            "receiver": {
+              "type": "Organization",
+              "identifier": {
+                "system": "http://nphies.sa/license/payer-license",
+                "value": "SYNTHETIC-PAYER"
+              }
+            }
+          }
+        ],
+        "focus": [
+          {
+            "reference": "urn:uuid:00ea788e-0626-461c-b50c-373901654b6b"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:00ea788e-0626-461c-b50c-373901654b6b",
+      "resource": {
+        "resourceType": "CoverageEligibilityRequest",
+        "id": "00ea788e-0626-461c-b50c-373901654b6b",
+        "identifier": [
+          {
+            "system": "https://example.invalid/eligibility",
+            "value": "synthetic-SYNTHETIC-PATIENT-001"
+          }
+        ],
+        "status": "active",
+        "purpose": [
+          "validation",
+          "benefits"
+        ],
+        "priority": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/processpriority",
+              "code": "normal"
+            }
+          ]
+        },
+        "patient": {
+          "reference": "urn:uuid:08ef5b4d-98d2-46a3-9a79-ae8bc6c6dd3a"
+        },
+        "created": "2026-01-01T12:00:00Z",
+        "servicedPeriod": {
+          "start": "2026-01-01",
+          "end": "2026-01-01"
+        },
+        "provider": {
+          "reference": "urn:uuid:2dae314c-562c-475a-a3e3-6214e664c3ad"
+        },
+        "insurer": {
+          "reference": "urn:uuid:350314b8-ff4f-44e6-ab63-9ef0debe9687"
+        },
+        "insurance": [
+          {
+            "focal": true,
+            "coverage": {
+              "reference": "urn:uuid:401cec64-2e1e-4cd7-a319-17de80df8fb4"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:08ef5b4d-98d2-46a3-9a79-ae8bc6c6dd3a",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "08ef5b4d-98d2-46a3-9a79-ae8bc6c6dd3a",
+        "identifier": [
+          {
+            "system": "https://example.invalid/synthetic-patient-id",
+            "value": "SYNTHETIC-PATIENT-001"
+          }
+        ],
+        "name": [
+          {
+            "family": "Synthetic",
+            "given": [
+              "Patient001"
+            ]
+          }
+        ],
+        "gender": "unknown"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:2dae314c-562c-475a-a3e3-6214e664c3ad",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "2dae314c-562c-475a-a3e3-6214e664c3ad",
+        "identifier": [
+          {
+            "system": "http://nphies.sa/license/provider-license",
+            "value": "SYNTHETIC-PROVIDER"
+          }
+        ],
+        "active": true,
+        "name": "Synthetic Provider"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:350314b8-ff4f-44e6-ab63-9ef0debe9687",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "350314b8-ff4f-44e6-ab63-9ef0debe9687",
+        "identifier": [
+          {
+            "system": "http://nphies.sa/license/payer-license",
+            "value": "SYNTHETIC-PAYER"
+          }
+        ],
+        "active": true,
+        "name": "Synthetic Insurer"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:401cec64-2e1e-4cd7-a319-17de80df8fb4",
+      "resource": {
+        "resourceType": "Coverage",
+        "id": "401cec64-2e1e-4cd7-a319-17de80df8fb4",
+        "identifier": [
+          {
+            "system": "https://example.invalid/member-id",
+            "value": "SYNTHETIC-MEMBER-001"
+          }
+        ],
+        "status": "active",
+        "subscriberId": "SYNTHETIC-MEMBER-001",
+        "beneficiary": {
+          "reference": "urn:uuid:08ef5b4d-98d2-46a3-9a79-ae8bc6c6dd3a"
+        },
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/subscriber-relationship",
+              "code": "self"
+            }
+          ]
+        },
+        "payor": [
+          {
+            "reference": "urn:uuid:350314b8-ff4f-44e6-ab63-9ef0debe9687"
+          }
+        ]
+      }
+    }
+  ]
+}

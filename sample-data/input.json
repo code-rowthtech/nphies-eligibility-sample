@@ -1,0 +1,7 @@
+{
+  "patientId": "SYNTHETIC-PATIENT-001",
+  "memberId": "SYNTHETIC-MEMBER-001",
+  "providerLicense": "SYNTHETIC-PROVIDER",
+  "payerLicense": "SYNTHETIC-PAYER",
+  "serviceDate": "2026-01-01"
+}
